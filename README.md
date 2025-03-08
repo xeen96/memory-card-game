@@ -13,7 +13,7 @@ This is a simple memory card game built with React and TypeScript. The game shuf
 Clone the repository and install dependencies:
 
 ```sh
-git clone https://github.com/yourusername/memory-card-game.git](https://github.com/xeen96/memory-card-game.git
+git clone https://github.com/xeen96/memory-card-game.git
 cd memory-card-game
 npm install
 ```
