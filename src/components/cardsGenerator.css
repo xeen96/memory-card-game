@@ -1,0 +1,36 @@
+.content {
+  background-color: #333;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1em;
+  gap: 1em;  
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  overflow: clip;
+  cursor: pointer;
+  background-color: lightseagreen;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 7px lightseagreen;
+  opacity: 0.7;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.card.opened > .image {
+  opacity: 1; 
+}
