@@ -3,15 +3,16 @@ interface CardsGeneratorProps {
   items: string[]; 
 }
 const CardsGenerator: React.FC<CardsGeneratorProps> = ({ items }) => {
-  const shuffled = React.useMemo(() => shuffle<string>([...items, ...items]), [items]);
+  const [resetKey, setResetKey] = React.useState(0);
   const [selected, setSelected] = React.useState<number[]>([]);
   const [matched, setMatched] = React.useState<number[]>([]);
 
+  const shuffled = React.useMemo(() => shuffle<string>([...items, ...items]), [items, resetKey]);
 
   const resetGame = () => {
-    shuffle<string>([...items, ...items]);
     setSelected([]);
     setMatched([]);
+    setResetKey((prev) => prev + 1);
   };
 
 
